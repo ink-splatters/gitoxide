@@ -191,6 +191,7 @@ zlib-rs = { opt-level = 3 }
 [profile.release]
 overflow-checks = false
 lto = "thin"
+codegen-units = 1
 # This bloats files but assures destructors are called, important for tempfiles. One day I hope we
 # can wire up the 'abrt' signal handler so tempfiles will be removed in case of panics.
 panic = "unwind"
